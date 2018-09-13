@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh 'sudo mvn  test'
+        sh 'sudo mvn test'
         sh 'sudo rm -fr ./target'
       }
     }
@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh '''sudo cp -p ./target/SampleJava1.war /var/lib/tomcat8/webapps/sree-bo2.war
+        sh '''sudo cp -p ./target/SampleJava1.war /var/lib/tomcat8/webapps/abhi-bo1.war
 '''
         sh 'sudo rm -fr *'
       }
