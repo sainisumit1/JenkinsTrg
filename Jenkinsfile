@@ -10,6 +10,8 @@ pipeline {
       steps {
         sh 'sudo mvn test'
         sh 'sudo rm -fr ./target'
+        sh '''echo "Line1..."
+echo "Line2..."'''
       }
     }
     stage('Build') {
